@@ -27,16 +27,6 @@ exports.get = (req, res) => {
   res.status(200).send(profSemCpf)
 }
 
-// exports.getById = (req, res) => {
-//   const id = req.params.id
-//   const professora = professoras.find(professora => professora.id == id)
-//   const profSemCpf = professora.map(item => {
-//     delete item.cpf
-//     return item
-//   })
-//   res.status(200).send(profSemCpf)
-// }
-
 exports.getById = (req, res) => {
   const id = req.params.id
   const prof = professoras.find(prof => prof.id == id)
